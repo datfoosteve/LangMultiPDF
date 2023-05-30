@@ -1,4 +1,3 @@
-import time
 import streamlit as st
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
@@ -102,7 +101,7 @@ def main():
                 st.session_state.conversation = get_conversation_chain(
                     vectorstore)
                 
-                time.sleep(5)
+                
                 st.success('Done!')
 
 
