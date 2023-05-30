@@ -66,7 +66,7 @@ def handle_userinput(user_question):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Chat with multiple PDFs",
+    st.set_page_config(page_title="Converse with multiple PDFs",
                        page_icon=":books:")
     st.write(css, unsafe_allow_html=True)
 
@@ -76,7 +76,7 @@ def main():
         st.session_state.chat_history = None
 
     st.header("Chat with multiple PDFs :books:")
-    user_question = st.text_input("Ask a question about your documents:")
+    user_question = st.text_input("Ask a question about your PDF Documents:")
     if user_question:
         handle_userinput(user_question)
 
