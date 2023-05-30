@@ -48,7 +48,7 @@ bot_template = '''
 user_template = '''
 <div class="chat-message user">
     <div class="avatar">
-        <img src="https://em-content.zobj.net/source/microsoft-teams/363/beaming-face-with-smiling-eyes_1f601.png" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
+        <img src="https://createethos.com/wp-content/uploads/2021/06/ethos_new-1@2x.png" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
     </div>    
     <div class="message">{{MSG}}</div>
 </div>

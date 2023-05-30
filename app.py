@@ -1,3 +1,4 @@
+import time
 import streamlit as st
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
@@ -67,7 +68,7 @@ def handle_userinput(user_question):
 def main():
     load_dotenv()
     st.set_page_config(page_title="ETHOS AI PDF Chatbot",
-                       page_icon=":books:")
+                       page_icon=":robot:")
     st.write(css, unsafe_allow_html=True)
 
     if "conversation" not in st.session_state:
@@ -75,6 +76,8 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
+    st.image("https://createethos.com/wp-content/uploads/2021/06/ethos-web.png", width=300, caption="Powered By ETHOS" )
+    
     st.header("Use AI to converse with multiple PDFs")
     user_question = st.text_input("Ask a question about your PDF Documents:")
     if user_question:
@@ -98,6 +101,9 @@ def main():
                 # create conversation chain
                 st.session_state.conversation = get_conversation_chain(
                     vectorstore)
+                
+                time.sleep(5)
+                st.success('Done!')
 
 
 if __name__ == '__main__':
