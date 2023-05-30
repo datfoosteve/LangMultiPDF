@@ -75,15 +75,15 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("Chat with multiple PDFs :books:")
+    st.header("Use AI to converse with multiple PDFs")
     user_question = st.text_input("Ask a question about your PDF Documents:")
     if user_question:
         handle_userinput(user_question)
 
     with st.sidebar:
-        st.subheader("Your documents")
+        st.subheader("Your PDFS!")
         pdf_docs = st.file_uploader(
-            "Upload your PDFs here and click on 'Process'", accept_multiple_files=True)
+            "Upload your PDFs here and click on 'Injest PDFs'", accept_multiple_files=True)
         if st.button("Injest PDFs"):
             with st.spinner("Digesting your PDFs..."):
                 # get pdf text
