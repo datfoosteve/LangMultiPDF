@@ -6,8 +6,18 @@ css = '''
 .chat-message.user {
     background-color: #2b313e
 }
-.chat-message.bot {
+--------------------
+.chat-message.user .message { 
+    background-color: #4f5b66
+}
+
+.chat-message.bot .message {
     background-color: #475063
+}
+--------------------
+
+.chat-message.bot {
+    background-color: #475063 
 }
 .chat-message .avatar {
   width: 20%;
