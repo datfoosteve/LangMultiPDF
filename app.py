@@ -68,7 +68,6 @@ def main():
     load_dotenv()
     st.set_page_config(page_title="ETHOS AI PDF Chatbot",
                        page_icon=":robot:")
-
     st.write(css, unsafe_allow_html=True)
 
     if "conversation" not in st.session_state:
@@ -102,8 +101,6 @@ def main():
                 st.session_state.conversation = get_conversation_chain(
                     vectorstore)
                 
-                
-                st.success('Done!')
 
 
 if __name__ == '__main__':
