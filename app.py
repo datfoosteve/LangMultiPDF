@@ -10,7 +10,6 @@ from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain.llms import HuggingFaceHub
 
-
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
@@ -69,6 +68,7 @@ def main():
     load_dotenv()
     st.set_page_config(page_title="ETHOS AI PDF Chatbot",
                        page_icon=":robot:")
+
     st.write(css, unsafe_allow_html=True)
 
     if "conversation" not in st.session_state:
